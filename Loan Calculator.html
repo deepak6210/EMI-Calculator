@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="Loan Calculator.css" />
+	</head>
+	<body>
+		<form id="loan-form">
+			<h1 class="notification is-primary has-text">EMI Calculator</h1>
+
+			<div class="slidecontainer">
+				<input
+					type="range"
+					min="100000"
+					max="2000000"
+					value="1000000"
+					step="100000"
+					class="slider"
+					id="amount"
+				/>
+			</div>
+			<br />
+
+			<div class="slidecontainer">
+				<input
+					type="range"
+					min="1"
+					max="20"
+					value="10"
+					step="0.1"
+					class="slider"
+					id="interest"
+				/>
+			</div>
+			<br />
+
+			<div class="slidecontainer">
+				<input
+					type="range"
+					min="1"
+					max="30"
+					value="10"
+					class="slider"
+					id="year"
+				/>
+			</div>
+			<br />
+
+			<div class="columns is-multiline">
+				<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+					<div class="notification is-primary has-text">
+						<p class="title">Amount: <span id="demo1"></span></p>
+					</div>
+				</div>
+
+				<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+					<div class="notification is-info has-text">
+						<p class="title">Interest Rate: <span id="demo2"></span></p>
+					</div>
+				</div>
+
+				<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+					<div class="notification is-link has-text">
+						<p class="title">Years: <span id="demo3"></span></p>
+					</div>
+				</div>
+			</div>
+
+			<br /><br />
+			<div class="control">
+				<button class="button is-large is-fullwidth is-primary is-outlined">
+					Calculate
+				</button>
+			</div>
+
+			<!-- RESULTS -->
+			<section class="section">
+				<h1 class="title">Calculated Results</h1>
+				<div class="columns is-multiline">
+					<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+						<div class="notification is-primary has-text">
+							<p id="monthlyPayment" class="title is-1">₹</p>
+							<p class="subtitle is-4">Monthly Payments</p>
+						</div>
+					</div>
+
+					<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+						<div class="notification is-info has-text">
+							<p id="totalInterest" class="title is-1">₹</p>
+							<p class="subtitle is-4">Total Interest</p>
+						</div>
+					</div>
+
+					<div class="column is-12-tablet is-6-desktop is-3-widescreen">
+						<div class="notification is-link has-text">
+							<p id="totalPayment" class="title is-1">₹</p>
+							<p class="subtitle is-4">Total Amount</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</form>
+		<script src="Loan Calculator.js"></script>
+	</body>
+</html>
